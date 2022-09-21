@@ -10,6 +10,6 @@ int main()
     char world[BUF_SIZE];
     fgets(world, sizeof(world), stdin);
     world[strlen(world) - 1] = '\0';
-    printf("Hello, %s!", world);
+    printf("Hello, %s!\n", world);
     return 0;
 }
