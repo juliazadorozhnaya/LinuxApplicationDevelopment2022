@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <ncurses.h>
+#include <locale.h>
 
 #define DX 2
 #define BUF_SIZE 1024
@@ -23,6 +24,7 @@ int max(int a, int b)
 
 void wshow(WINDOW *win, int start_row, int start_col)
 {
+    setlocale(LC_ALL, "Russian");
     werase(win);
 
     wmove(win, 1, 0);
@@ -38,6 +40,7 @@ void wshow(WINDOW *win, int start_row, int start_col)
 
 int main(int argc, char **argv)
 {
+    setlocale(LC_ALL, "Russian");
     if (argc < 2) {
         fprintf(stderr, "Usage: %s FILENAME.\nShows file FILENAME.\n", argv[0]);
         return 1;
@@ -63,14 +66,14 @@ int main(int argc, char **argv)
         ++CODE_LINES;
         MAX_LINE_LENGTH = max(MAX_LINE_LENGTH, length[i]);
     }
+    int size = ftell(fp) + 1; 
     fclose(fp);
 
     initscr();
     noecho();
     cbreak();
     set_escdelay(0);
-
-    printw("File: %s", filename);
+    printw("File: '%s', File Size: '%d' bytes\n", filename, size);
     refresh();
 
     WINDOW *win = newwin(WINDOW_LINES, WINDOW_COLS, DX, DX);
