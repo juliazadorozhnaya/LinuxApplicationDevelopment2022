@@ -1,1 +1,0 @@
-CMakeLists.txt not found in /home/jzadorozhnaya/LinuxApplicationDevelopment2022/02_TerminalProject Select CMakeLists.txt
