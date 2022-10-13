@@ -3,9 +3,9 @@
 i=0
 coords=()
 art=()
-t=${1:-0.01}
+DELAY=${1:-0.01}
 
-while read -r line
+while IFS= read -r line
 do
     art+=("$line")
   	if [ ${line:$i:1} != " " ]
@@ -14,23 +14,28 @@ do
       do
           coords+=("$i $j")
       done
+    else
+      for j in $(seq 0 $((${#line}-1)) )
+      do
+          coords+=("$i $j")
+      done
     fi
     ((i++))
 done
-coords="$(echo -n "$coords" | shuf)"
+
+coords="$(echo -ne "$coords" | shuf)"
 
 tput clear
 echo -n "$art" |
 for idx in $(shuf -i 0-$((${#coords[@]}-1)) )
 do
-    x=$(echo -n ${coords[$idx]} | cut -f 1 -d " ")
-    y=$(echo -n ${coords[$idx]} | cut -f 2 -d " ")
+    x=$(echo ${coords[$idx]} | cut -f 1 -d " ")
+    y=$(echo ${coords[$idx]} | cut -f 2 -d " ")
     tput cup $x $y
-    echo -n "${art[$x]:$y:1}"
-    sleep $t
+    echo "${art[$x]:$y:1}"
+    sleep $DELAY
 
 done
 tput cup "$(tput lines)" 0
 echo -n
-
 
