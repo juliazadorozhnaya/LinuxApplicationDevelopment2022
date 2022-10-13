@@ -3,5 +3,5 @@
 01_BuildReq/cmake-build-debug
 01_BuildReq/CMakeLists.txt
 01_BuildReq/a.out
-
+.idea
 .vscode
