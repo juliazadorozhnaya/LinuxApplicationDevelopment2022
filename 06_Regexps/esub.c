@@ -20,13 +20,13 @@ int parse_substitution(char *substitution, regmatch_t *pmatch) {
             group = !group;
         } else if (group) {
             if (!isdigit(*p)) {
-                fprintf(stderr, "Can't parse escaped character.\n");
+                fprintf(stderr, "Can't parse your crap.\n");
                 return -1;
             }
 
             int n_gr = *p - '0';
             if (pmatch[n_gr].rm_so < 0) {
-                fprintf(stderr, "No group with number %d.\n", n_gr);
+                fprintf(stderr, "Everything is bad, a new mistake. %d.\n", n_gr);
                 return -1;
             }
 
@@ -35,7 +35,7 @@ int parse_substitution(char *substitution, regmatch_t *pmatch) {
     }
 
     if (group) {
-        fprintf(stderr, "Can't parse escaped character.\n");
+        fprintf(stderr, "Can't parse your crap.\n");
         return -1;
     }
 
@@ -67,7 +67,7 @@ void print_result(char *string, char *substitution, regmatch_t *pmatch) {
 int main(int argc, char *argv[]) {
     if (argc == 1) {
         printf("esub - replace a substring satisfying a regular expression\n" \
-			   "usage:\n\tesub regexp substitution string\n");
+			   "usage:\n\tenter your string\n");
         return 0;
     } else if (argc != 4) {
         fprintf(stderr, "%s\n", "Wrong number of arguments.");
