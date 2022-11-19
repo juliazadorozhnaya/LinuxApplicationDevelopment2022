@@ -17,22 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: guess_number.c:15
-msgid "Guess a number in range 1-100"
+#: main.c:23
+msgid "Guess number between"
 msgstr ""
 
-#: guess_number.c:19
-msgid "You Guessed"
+#: main.c:23
+msgid "and"
 msgstr ""
 
-#: guess_number.c:23
-msgid "Is your number bigger than"
+#: main.c:32
+msgid "Is number greater than"
 msgstr ""
 
-#: guess_number.c:23 guess_number.c:27
+#: main.c:32 main.c:34
 msgid "yes"
 msgstr ""
 
-#: guess_number.c:23 guess_number.c:32
+#: main.c:32 main.c:36
 msgid "no"
+msgstr ""
+
+#: main.c:39
+#, c-format
+msgid "Bad input, try again\n"
+msgstr ""
+
+#: main.c:44
+msgid "Number is"
 msgstr ""

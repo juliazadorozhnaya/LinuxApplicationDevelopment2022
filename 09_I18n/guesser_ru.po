@@ -5,6 +5,7 @@
 #
 msgid ""
 msgstr ""
+
 "Project-Id-Version:  09_I18n\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-18 02:13+0300\n"
@@ -19,22 +20,31 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: guess_number.c:15
-msgid "Guess a number in range 1-100"
-msgstr "Угадайте число в диапазоне 1-100"
+#: main.c:23
+msgid "Guess number between"
+msgstr "Р—Р°РіР°РґР°Р№С‚Рµ С‡РёСЃР»Рѕ РјРµР¶РґСѓ"
 
-#: guess_number.c:19
-msgid "You Guessed"
-msgstr "Вы догадались"
+#: main.c:23
+msgid "and"
+msgstr "Рё"
 
-#: guess_number.c:23
-msgid "Is your number bigger than"
-msgstr "Ваш номервы больше чем"
+#: main.c:32
+msgid "Is number greater than"
+msgstr "Р§РёСЃР»Рѕ Р±РѕР»СЊС€Рµ"
 
-#: guess_number.c:23 guess_number.c:27
+#: main.c:32 main.c:34
 msgid "yes"
-msgstr "да"
+msgstr "РґР°"
 
-#: guess_number.c:23 guess_number.c:32
+#: main.c:32 main.c:36
 msgid "no"
-msgstr "нет"
+msgstr "РЅРµС‚"
+
+#: main.c:39
+#, c-format
+msgid "Bad input, try again\n"
+msgstr "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ, РїРѕРїСЂРѕР±СѓР№С‚Рµ СЃРЅРѕРІР°\n"
+
+#: main.c:44
+msgid "Number is"
+msgstr "Р§РёСЃР»Рѕ СЂР°РІРЅРѕ"
