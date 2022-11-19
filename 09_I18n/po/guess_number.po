@@ -29,7 +29,7 @@ msgstr "Вы догадались"
 
 #: guess_number.c:23
 msgid "Is your number bigger than"
-msgstr "Ваш номер больше чем"
+msgstr "Ваш номервы больше чем"
 
 #: guess_number.c:23 guess_number.c:27
 msgid "yes"
