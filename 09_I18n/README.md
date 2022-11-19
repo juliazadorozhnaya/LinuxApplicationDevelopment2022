@@ -18,7 +18,6 @@ make run_russian
 ## Чтобы изменить переводы нужно выполнить:
 ```
 make update_pot_po
-# Отредактировать guesser_ru.po
 make ru/LC_MESSAGES/guesser.mo
 ```
 
