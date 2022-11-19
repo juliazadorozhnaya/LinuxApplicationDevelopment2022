@@ -22,4 +22,3 @@ mo: $(PROG).po
 
 clean:
 	@rm -f $(PROG)
-	@rm -r ru_RU.utf8/r
